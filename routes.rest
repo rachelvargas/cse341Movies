@@ -1,6 +1,6 @@
 //LOCALHOST
 
-//get all contacts
+//get all movies
 GET http://localhost:8080/movies
 
 //getting only one movie by its id
@@ -40,13 +40,15 @@ POST http://localhost:8080/movies
 
 //PUT - Update a movie
 ### 
-PUT http://localhost:8080/movies/63c74045f37e979731f466d4
+PUT http://localhost:8080/movies/63c751af9d2000eb856f4469 HTTP/1.1
 
 //DELETE movie
 ###
-DELETE http://localhost:8080/movies/63c74045f37e979731f466d4
+DELETE http://localhost:8080/movies/63c751af9d2000eb856f4469 HTTP/1.1
 
 //Render
+###
+GET https://cse341movies-app.onrender.com/movies
 
 
 

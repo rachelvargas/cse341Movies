@@ -62,11 +62,11 @@ const updateMovie = async(req, res) => {
   {
     
     rank: "11",
-    title: "Furious 7",
+    title: "",
     director:"James Wan",
     yearRelease: "2015",
     rated: "PG-13",
-    budget: "$190,000",
+    budget: "$190,000,000",
     lifeTimeGross:"$1,515,341,399"
 
 };
@@ -79,7 +79,6 @@ res.setHeader('Content-Type', 'application/json');
 if (response.modifiedCount > 0) {
   res.status(204).send();
   console.log(response);
-
 } else {
   res.status(500).json(response.error || 'Error: The movie could not be update.');
 }
@@ -95,10 +94,9 @@ const deleteMovie = async(req, res) => {
   if (response.modifiedCount > 0) {
     res.status(200).send();
     console.log(response);
-
-} else {
+  } else {
     res.status(500).json(response.error || 'Error: The movie could not be deleted.');
-}
+  }
 };
 
 module.exports = { getData, getOne, newMovie, updateMovie, deleteMovie }
