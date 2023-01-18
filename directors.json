@@ -1,0 +1,57 @@
+{
+    "director": {
+    "name": "James Cameron",
+    "birthday": "8/16/1954",    
+    "nationality": "Canadian",
+    "knownFor": "Avatar, Titanic, Terminator 2: Judgment Day, Aliens"
+    },
+
+    "director2": {
+    "name": "Anthony Russo",
+    "birthday": "2/3/1970",    
+    "nationality": "American",
+    "knownFor": "Avengers:Endgame, Avengers:Infinity War, Captain America: The Winter Soldier"
+    },
+
+    "director3": {
+    "name": "Joe Russo",
+    "birthday": "7/8/1971",    
+    "nationality": "American",
+    "knownFor":"Avengers:Endgame, Avengers:Infinity War, Captain America: The Winter Soldier"
+    },
+
+    "director4": {
+    "name": "J.J. Abrans",
+    "birthday": "6/27/1966",    
+    "nationality": "American",
+    "knownFor":"Lost, Star Trek, Star Wars: episode VII, Star Wars: Episode IX"
+    },
+
+    "director5": {
+    "name": "Jon Watts",
+    "birthday": "6/28/1981",    
+    "nationality": "American",
+    "knownFor": "Spider Man: No Way at Home, Cop Car, The Old Man"
+    },
+
+    "director6": {
+    "name": "Colin Trevorrow",
+    "birthday": "9/131976",    
+    "nationality": "American",
+    "knownFor": "Jurassic World, Jurassic World: Dominion, Safety No Guaranteed"
+    },
+
+    "director7": {
+    "name": "Jon Favrean",
+    "bornYear": "1966",    
+    "nationality": "American",
+    "knownFor": "Iron Man, Avengers: Endgame, Chef, Swingers"
+    },
+    "director8": {
+    "name": "Joss Whedon",
+    "birthday": "1964",    
+    "nationality": "American",
+    "knownFor": "The Avengers, Angel, The Cabin in the Woods"
+    }       
+    
+  }

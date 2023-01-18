@@ -1,0 +1,53 @@
+//LOCALHOST
+
+//get all contacts
+GET http://localhost:8080/movies
+
+//getting only one movie by its id
+### RANK 1
+GET http://localhost:8080/movies/63c6c28f22e2e813e3492f19
+
+### RANK 2
+GET http://localhost:8080/movies/63c6c28f22e2e813e3492f1a
+
+### RANK 3
+GET http://localhost:8080/movies/63c6c28f22e2e813e3492f1b
+
+### RANK 4
+GET http://localhost:8080/movies/63c6c28f22e2e813e3492f1c
+
+### RANK 5
+GET http://localhost:8080/movies/63c6c28f22e2e813e3492f1d
+
+### RANK 6
+GET http://localhost:8080/movies/63c6c28f22e2e813e3492f1e
+
+### RANK 7
+GET http://localhost:8080/movies/63c6c28f22e2e813e3492f1f
+
+### RANK 8
+GET http://localhost:8080/movies/63c6c28f22e2e813e3492f20
+
+### RANK 9
+GET http://localhost:8080/movies/63c6c28f22e2e813e3492f20
+
+### RANK 10
+GET http://localhost:8080/movies/63c6c28f22e2e813e3492f22
+
+//POST - New a movie
+### RANK 11
+POST http://localhost:8080/movies
+
+//PUT - Update a movie
+### 
+PUT http://localhost:8080/movies/63c74045f37e979731f466d4
+
+//DELETE movie
+###
+DELETE http://localhost:8080/movies/63c74045f37e979731f466d4
+
+//Render
+
+
+
+

@@ -1,0 +1,103 @@
+{
+    "movie": {
+    "rank": "1",
+    "title": "Avatar",
+    "director":"James Cameron",
+    "yearRelease": "2009",
+    "rated": "PG-13",
+    "budget": "$237,000,000",
+    "lifeTimeGross":"$2,922,917,914"
+    },
+
+    "movie2": {
+    "rank": "2",
+    "title": "Avengers: Endgame",
+    "director":"Anthony Russo",
+    "yearRelease": "2019",
+    "rated": "PG-13",
+    "budget": "$356,000,000",
+    "lifeTimeGross":"$2,797,501,328"
+    },
+
+    "movie3": {
+    "rank": "3",
+    "title": "Titanic",
+    "director":"James Cameron",
+    "yearRelease": "1997",
+    "rated": "PG-13",
+    "budget": "$200,000,000",
+    "lifeTimeGross":"4$2,194,690,964"
+    },
+
+    "movie4": {
+    "rank": "4",
+    "title": "Star Wars: Episode VII",
+    "director":"J.J. Abrans",
+    "yearRelease": "2015",
+    "rated": "PG-13",
+    "budget": "$245,000,000",
+    "lifeTimeGross":"$2,069,521,700"
+    },
+
+    "movie5": {
+    "rank": "5",
+    "title": "Avengers: Infinity",
+    "director":"Anthony and Joe Russo",
+    "yearRelease": "2018",
+    "rated": "PG-13",
+    "budget": "$200,000,000",
+    "lifeTimeGross":"$2,048,359,754"
+    },
+
+    "movie6": {
+    "rank": "6",
+    "title": "Spider Man: No Way Home",
+    "director":"Jon Watts",
+    "yearRelease": "2021",
+    "rated": "PG-13",
+    "budget": "$316,000,000",
+    "lifeTimeGross":"$1,916,306,995"
+    },
+
+    "movie7": {
+    "rank": "7",
+    "title": "Avatar: The Way of Water",
+    "director":"James Cameron",
+    "yearRelease": "2022",
+    "rated": "PG-13",
+    "budget": "$250,000,000",
+    "lifeTimeGross":"$1,903,301,348"
+    },
+
+    "movie8": {
+    "rank": "8",
+    "title": "Jurassic World",
+    "director":"Colin Trevorrow",
+    "yearRelease": "2015",
+    "rated": "PG-13",
+    "budget": "$150,000,000",
+    "lifeTimeGross":"$1,671,537,444"
+    },
+
+    "movie9": {
+    "rank": "9",
+    "title": "The Lion King",
+    "director":"Jon Favreau",
+    "yearRelease": "2019",
+    "rated": "PG",
+    "budget": "$260,000,000",
+    "lifeTimeGross":"$1,663,075,401"
+    },
+
+    "movie10": {
+    "rank": "10",
+    "title": "The Avengers",
+    "director":"Joss Whedon",
+    "yearRelease": "2012",
+    "rated": "PG-13",
+    "budget": "$220,000,000",
+    "lifeTimeGross":"$1,518,815,515"
+    }
+
+
+}
