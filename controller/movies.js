@@ -31,17 +31,16 @@ const getOne = async(req, res, next) => {
 
 const newMovie = async(req, res) => {
   const movie = 
-  { 
+  {                                                     
+    rank: req.body.rank,
+    title: req.body.title,
+    director: req.body.director,
+    yearRelease: req.body.yearReleaser,
+    rated: req.body.rated,
+    budget: req.body.budget,
+    lifeTimeGross: req.body.lifeTimeGross
 
-    rank: "11",
-    title: "Furious 7",
-    director:"James Wan",
-    yearRelease: "2015",
-    rated: "PG-13",
-    budget: "$190,000,000",
-    lifeTimeGross:"$1,515,341,399"
-
-};
+  };
   const response = await mongodb
   .getDb()
   .db("grossessMovies")
@@ -59,17 +58,18 @@ const newMovie = async(req, res) => {
 const updateMovie = async(req, res) => {
   const movieId = new ObjectId(req.params.id);
   const movie =
-  {
-    
-    rank: "11",
-    title: "",
-    director:"James Wan",
-    yearRelease: "2015",
-    rated: "PG-13",
-    budget: "$190,000,000",
-    lifeTimeGross:"$1,515,341,399"
+  {                                                     
+    rank: req.body.rank,
+    title: req.body.title,
+    director: req.body.director,
+    yearRelease: req.body.yearReleaser,
+    rated: req.body.rated,
+    budget: req.body.budget,
+    lifeTimeGross: req.body.lifeTimeGross
 
-};
+
+  };
+  
 const response = await mongodb
 .getDb()
 .db("grossessMovies")

@@ -36,15 +36,41 @@ GET http://localhost:8080/movies/63c6c28f22e2e813e3492f22
 
 //POST - New a movie
 ### RANK 11
-POST http://localhost:8080/movies
+POST http://localhost:8080/movies HTTP/1.1
+Content-Type: application/json
+
+{ 
+
+    "rank": "11",
+    "title": "Furious 7",
+    "director":"James Wan",
+    "yearRelease": "2015",
+    "rated": "PG-13",
+    "budget": "$190,000,000",
+    "lifeTimeGross":"$1,515,341,399"
+
+}
 
 //PUT - Update a movie
 ### 
-PUT http://localhost:8080/movies/63c751af9d2000eb856f4469 HTTP/1.1
+PUT http://localhost:8080/movies/63c8832ac7ebfa357101cdb2 HTTP/1.1
+Content-Type: application/json
+
+{
+    
+    "rank": "11",
+    "title": "",
+    "director":"James Wan",
+    "yearRelease": "2015",
+    "rated": "PG-13",
+    "budget": "$190,000,000",
+    "lifeTimeGross":"$1,515,341,399"
+
+}
 
 //DELETE movie
 ###
-DELETE http://localhost:8080/movies/63c751af9d2000eb856f4469 HTTP/1.1
+DELETE http://localhost:8080/movies/63c8832ac7ebfa357101cdb2 HTTP/1.1
 
 //Render
 ###
