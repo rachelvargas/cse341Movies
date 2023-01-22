@@ -18,8 +18,42 @@
         "responses": {}
       }
     },
+    "/directors/{name}": {
+      "tags": ["directors"],
+        "description": "",        
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "type": "string",
+            "items": {
+              "type": "string",
+              "default": "available"
+            }
+        
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "400": {
+            "description": ""
+          }
+        }
+      }
+    },
     "/movies/": {
       "get": {
+        "tags": ["Not Yet Implemented"],
         "description": "",
         "produces": [
           "application/json"
@@ -77,6 +111,7 @@
 },
 "/movies/{id}": {
       "get": {
+        "tags": ["Not Yet Implemented"],
         "description": "",
         "produces": [
           "application/json"
@@ -165,4 +200,4 @@
       }
     }
   }
-}
+

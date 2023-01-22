@@ -1,15 +1,18 @@
 const express = require('express');
 const router = express.Router();
-const contactController = require('../controller/movies');
+const movieController = require('../controller/movies');
 
-router.get('/', contactController.getData);
+const  { movieValidation }  = require('./validation.js');
 
-router.get('/:id', contactController.getOne);
 
-router.post('/', contactController.newMovie);
+router.get('/', movieController.getData);
 
-router.put('/:id', contactController.updateMovie);
+router.get('/:id', movieController.getOne);
 
-router.delete('/:id', contactController.deleteMovie);
+router.post('/', movieValidation, movieController.newMovie);
+
+router.put('/:id', movieValidation, movieController.updateMovie);
+
+router.delete('/:id', movieController.deleteMovie);
 
 module.exports = router;

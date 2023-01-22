@@ -3,7 +3,7 @@ const app = express();
 const port = process.env.PORT || 8080;
 const mongodb = require('./db/connect');
 const bodyParser = require('body-parser');
-const contactRoutes = require('./routes');
+const router = require('./routes');
 const cors = require('cors');
 //const MongoClient = require('mongodb').MongoClient;
 
@@ -20,7 +20,7 @@ app.use((req, res, next) => {
     next();
   })
   
-  app.use('/', contactRoutes);
+  app.use('/', router);
 
 mongodb.connectDb((err, mongodb) => {
   if (err) {

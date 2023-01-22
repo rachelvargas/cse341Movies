@@ -1,6 +1,11 @@
 //LOCALHOST
 
+//get all directors
+GET http://localhost:8080/directors
+
+
 //get all movies
+###
 GET http://localhost:8080/movies
 
 //getting only one movie by its id
@@ -33,6 +38,7 @@ GET http://localhost:8080/movies/63c6c28f22e2e813e3492f20
 
 ### RANK 10
 GET http://localhost:8080/movies/63c6c28f22e2e813e3492f22
+
 
 //POST - New a movie
 ### RANK 11
