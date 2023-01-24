@@ -10,7 +10,7 @@ GET http://localhost:8080/movies
 
 //getting only one movie by its id
 ### RANK 1
-GET http://localhost:8080/movies/63c6c28f22e2e813e3492f19
+GET http://localhost:8080/movies/63c6c28f22e2e813e3492f1
 
 ### RANK 2
 GET http://localhost:8080/movies/63c6c28f22e2e813e3492f1a
@@ -49,7 +49,7 @@ Content-Type: application/json
 
     "rank": "11",
     "title": "Furious 7",
-    "director":"James Wan",
+    "director":"",
     "yearRelease": "2015",
     "rated": "PG-13",
     "budget": "$190,000,000",

@@ -11,62 +11,24 @@
     "http"
   ],
   "paths": {
-    "/api-docs": {
-      "get": {
-        "description": "",
-        "parameters": [],
-        "responses": {}
-      }
-    },
-    "/directors/{name}": {
-      "tags": ["directors"],
-        "description": "",        
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "name",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "type": "string",
-            "items": {
-              "type": "string",
-              "default": "available"
-            }
-        
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "schema": {
-              "type": "object"
-            }
-          },
-          "400": {
-            "description": ""
-          }
-        }
-      }
-    },
     "/movies/": {
       "get": {
-        "tags": ["Not Yet Implemented"],
         "description": "",
         "produces": [
           "application/json"
         ],
         "parameters": [],
         "responses": {
-          "200":{
-            "description":"OK"
-        }
+          "200": {
+            "description": "OK"
+          }
         }
       },
       "post": {
         "description": "",
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "body",
@@ -83,7 +45,7 @@
                 "director": {
                   "example": "any"
                 },
-                "yearRelease": {
+                "yearReleaser": {
                   "example": "any"
                 },
                 "rated": {
@@ -92,30 +54,32 @@
                 "budget": {
                   "example": "any"
                 },
-                "lifetimeGross": {
+                "lifeTimeGross": {
                   "example": "any"
                 }
               }
+            }
           }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "422": {
+            "description": "Unprocessable Entity"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
       }
-  ],
-  "responses": {
-    "201": {
-      "description": "Created"
-  },
-  "500": {
-      "description":"Internal Server Error"
-  }
-}
-}
-},
-"/movies/{id}": {
+    },
+    "/movies/{id}": {
       "get": {
-        "tags": ["Not Yet Implemented"],
         "description": "",
         "produces": [
           "application/json"
-      ],
+        ],
         "parameters": [
           {
             "name": "id",
@@ -127,6 +91,9 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       },
@@ -138,47 +105,10 @@
             "in": "path",
             "required": true,
             "type": "string"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "rank": {
-                  "example": "any"
-                },
-                "title": {
-                  "example": "any"
-                },
-                "director": {
-                  "example": "any"
-                },
-                "yearRelease": {
-                  "example": "any"
-                },
-                "rated": {
-                  "example": "any"
-                },
-                "budget": {
-                  "example": "any"
-                },
-                "lifetimeGross": {
-                  "example": "any"
-                }
-            }
           }
-        }      
         ],
-        "responses": {
-          "204": {
-            "description": "OK"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      },    
+        "responses": {}
+      },
       "delete": {
         "description": "",
         "parameters": [
@@ -189,15 +119,15 @@
             "type": "string"
           }
         ],
-        "responses": {
-          "204": {
-            "description": "No Content"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
+        "responses": {}
+      }
+    },
+    "/api-docs": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {}
       }
     }
   }
-
+}
