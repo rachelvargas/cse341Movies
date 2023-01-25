@@ -82,9 +82,7 @@ if (!errors.isEmpty()){
 } catch(error){
   return res.status(500).json(error || 'Error: The movie could not be update.');
   console.log(error)
-} /*finally {
-  await cleanUp()
-} */
+} 
 };
 
 const updateMovie = async(error, req, res) => {

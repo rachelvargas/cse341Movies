@@ -5,6 +5,12 @@ const directorController = require('../controller/directors');
 const { directorValidation } = require('./validation.js');
 
 
-router.get('/:name', directorController.getDirectors);
+router.get('/', directorController.getDirectors);
+
+router.post('/', directorValidation, directorController.newDirector);
+
+router.put('/:username', directorValidation, directorController.updateDirector);
 
 //router.get('/:id', movieController.getOne);
+
+module.exports = router;

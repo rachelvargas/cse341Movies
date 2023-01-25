@@ -3,6 +3,42 @@
 //get all directors
 GET http://localhost:8080/directors
 
+//POST - New a director
+### RANK 11
+POST http://localhost:8080/directors HTTP/1.1
+Content-Type: application/json
+
+{ 
+
+   
+    "username": "JossWhedon",
+    "passoword": "plBG90&%",
+    "name": "Joss Whedon",
+    "birthday": "1964",    
+    "nationality": "American",
+    "knownFor": "The Avengers, Angel, The Cabin in the Woods"
+          
+}
+
+//PUT - Update a director
+### 
+PUT http://localhost:8080/directors HTTP/1.1
+Content-Type: application/json
+
+{
+    
+    
+    "username": "",
+    "passoword": "plBG90&%",
+    "name": "Joss Whedon",
+    "birthday": "1964",    
+    "nationality": "American",
+    "knownFor": "The Avengers, Angel, The Cabin in the Woods"
+          
+
+}
+
+
 
 //get all movies
 ###
