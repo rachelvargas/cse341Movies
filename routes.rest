@@ -9,11 +9,8 @@ POST http://localhost:8080/directors HTTP/1.1
 Content-Type: application/json
 
 { 
-
-    "username": "JossWhedon",
-    "password": "plBG90&%",
     "name": "Joss Whedon",
-    "birthday": "1964",    
+    "birthday": "6/23/1964",    
     "nationality": "American",
     "knownFor": "The Avengers, Angel, The Cabin in the Woods"
           
@@ -26,10 +23,8 @@ Content-Type: application/json
 
 {
     
-    "username": "",
-    "password": "plBG90&%",
     "name": "Joss Whedon",
-    "birthday": "1964",    
+    "birthday": "6/23/1964",    
     "nationality": "American",
     "knownFor": "The Avengers, Angel, The Cabin in the Woods"
           
@@ -98,8 +93,8 @@ Content-Type: application/json
 {
     
     "rank": "11",
-    "title": "",
-    "director":"James Wan",
+    "title": "Furious 7",
+    "director":"",
     "yearRelease": "2015",
     "rated": "PG-13",
     "budget": "$190,000,000",

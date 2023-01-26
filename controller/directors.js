@@ -2,81 +2,88 @@
 const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
 const {validationResult} = require('express-validator');
-const Director = db.directors;
 
 
-const getDirectors = async(req, res) => {
+const getDirectors = async (req, res, next) => {
   try {
-    Director.find({})
-      .then((data) => {
-        res.status(200).send(data);
-      })
-      .catch((err) => {
-        res.status(500).send({
-          message: err.message || 'Some error occurred while retrieving users.'
-        });
-      });
-  } catch (err) {
-    res.status(500).json(err);
+    const result = await mongodb
+    .getDb()
+    .db("grossessMovies")
+    .collection('directors')
+    .find();
+    console.log(result)  
+    result.toArray().then((lists) => {
+      res.setHeader('Content-Type', 'application/json');
+      res.status(200).json(lists); 
+      console.log(lists);
+    }); //.catch(error => error)
+  } catch (error) {
+    //return res.status(500).json(error || 'Error: The movie could not be get.');
+    console.error(error  || 'Error: The movie could not be get.')
   }
-};
-  
-const newDirector = async (req, res) => {
-  /*const errors = validationResult(req)
-  if (!errors.isEmpty()){
-    return res.status(422).json({
-      errors: errors.array()
-})*/
-const errors = validationResult(req)
-  try {
-    if (!req.body.username || !req.body.password) {
-      res.status(400).send({ message: 'Content can not be empty!' });
-      return;
-      //const password = req.body.password;
-     
-  const director = new Director(req.body);
-  director
-      .save()
-      .then((data) => {
-        console.log(data);
-        res.status(201).send(data);
+  };
+
+  const newDirector = async (req, res) => {
+    const errors = validationResult(req)
+    if (!errors.isEmpty()){
+      return res.status(422).json({
+        errors: errors.array()
       })
-      .catch((err) => {
-        res.status(500).send({
-          message: err.message || 'Some error occurred while creating the user.'
-        });
-      });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-}
-};
-  
-    
-  const updateDirector = async(req, res) => {
-    try {
-    const username = new (req.params.username);
-    if (!username) {
-      res.status(400).send({ message: 'Invalid Username Supplied' });
-    }
-    Director.findOne({ username: username }, function (err, director ) {
-      director.username = req.params.username;
-      director.password = req.body.password;
-      director.name = req.body.name;
-      director.birthday = req.body.birthday;
-      director.nationality = req.body.nationality;
-      director.knownFor: req.body.knownFor;
-      director.save(function (err) {
-        if (err) {
-          res.status(500).json(err || 'Some error occurred while updating the contact.');
-        } else {
-          res.status(204).send();
+    } try {
+      const director =
+        {
+          name: req.body.name,
+          birthday: req.body.birthday,
+          nationality: req.body.nationality,
+          knownFor: req.body.knownFor
+        };
+      const response = await mongodb
+      .getDb()
+      .db("grossessMovies")
+      .collection('directors')
+      .insertOne(movie);
+      res.setHeader('Content-Type', 'application/json');
+      if (response.acknowledged) {
+        res.status(204).json(response);
+        console.log(response);
+      } else {
+        res.status(500).json(response.error || 'Error: The movie could not be update.');
+        console.log(error)
+      }
+    } catch(error){
+      return res.status(500).json(error || 'Error: The movie could not be update.');
+      console.log(error)
+    } 
+    };    
+    const updateDirector = async(error, req, res) => {
+      try {
+        if (!ObjectId.isValid(req.params.id)) {
+          res.status(400).json('Invalid id.');
         }
-      });
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-};    
-
+        const directorId = new ObjectId(req.params.id);
+        const director =
+        {
+          name: req.body.name,
+          birthday: req.body.birthday,
+          nationality: req.body.nationality,
+          knownFor: req.body.knownFor
+        };
+        const response = await mongodb
+        .getDb()
+        .db("grossessMovies")
+        .collection('directors')
+        .replaceOne({_id: directorId}, director);
+        res.setHeader('Content-Type', 'application/json');
+        if (response.modifiedCount > 0) {
+          res.status(204).send();
+          console.log(response);
+        } else {
+          res.status(500).json(response.error || 'Error: The director could not be update.');
+        }
+      } catch(error){
+        return res.status(500).json(error || 'Error: The director could not be update.');
+        console.log(error)
+      }
+    };
+  
 module.exports = { getDirectors, newDirector, updateDirector }

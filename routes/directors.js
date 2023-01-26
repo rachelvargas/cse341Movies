@@ -5,7 +5,7 @@ const directorController = require('../controller/directors');
 const { directorValidation } = require('./validation.js');
 
 
-router.get('/:username', directorController.getDirectors);
+router.get('/', directorController.getDirectors);
 
 router.post('/', directorValidation, directorController.newDirector);
 

@@ -1,7 +1,5 @@
 {
     "director": {
-    "username": "JamesCameron",
-    "password": "asRE#%87",
     "name": "James Cameron",
     "birthday": "8/16/1954",    
     "nationality": "Canadian",
@@ -9,8 +7,6 @@
     },
 
     "director2": {
-    "username": "AnthonyRusso",
-    "password": "bd4TY5&$",
     "name": "Anthony Russo",
     "birthday": "2/3/1970",    
     "nationality": "American",
@@ -18,8 +14,6 @@
     },
 
     "director3": {
-    "username": "JoeRusso",
-    "password": "985YTsa#",
     "name": "Joe Russo",
     "birthday": "7/8/1971",    
     "nationality": "American",
@@ -27,8 +21,6 @@
     },
 
     "director4": {
-    "username": "JJAbrans",
-    "password": "ok45DF@!",
     "name": "J.J. Abrans",
     "birthday": "6/27/1966",    
     "nationality": "American",
@@ -36,8 +28,6 @@
     },
 
     "director5": {
-    "username": "JonWatts",
-    "password": "LuMs4#6!",
     "name": "Jon Watts",
     "birthday": "6/28/1981",    
     "nationality": "American",
@@ -45,8 +35,6 @@
     },
 
     "director6": {
-    "username": "ColinTrevorrow",
-    "password": "weVC43%&",
     "name": "Colin Trevorrow",
     "birthday": "9/131976",    
     "nationality": "American",
@@ -54,10 +42,8 @@
     },
 
     "director7": {
-    "username": "JonFavrean",
-    "password": "abFV45&@",
     "name": "Jon Favrean",
-    "bornYear": "1966",    
+    "birthday": "9/131976",   
     "nationality": "American",
     "knownFor": "Iron Man, Avengers: Endgame, Chef, Swingers"
     }

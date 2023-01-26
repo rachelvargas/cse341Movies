@@ -43,7 +43,7 @@ const getOne = async(req, res, next) => {
       console.log(lists);
     });
   } catch (error) {
-    res.status(500).json({error:"this is not working"});
+    res.status(500).json({error:"This is an invalid id"});
     //console.error(error);
   }
 };

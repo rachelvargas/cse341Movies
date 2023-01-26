@@ -6,8 +6,8 @@ exports.movieValidation = [
 ]
  
 exports.directorValidation = [
-    check('username', 'Name of the director is requied').not().isEmpty(),
-    check('password', 'Password must be 6 or more characters').isLength({ min: 6 })
+    check('name', 'Name of the director is requied').not().isEmpty(),
+    //check('password', 'Password must be 6 or more characters').isLength({ min: 6 })
      
     
 ]
