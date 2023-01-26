@@ -10,9 +10,8 @@ Content-Type: application/json
 
 { 
 
-   
     "username": "JossWhedon",
-    "passoword": "plBG90&%",
+    "password": "plBG90&%",
     "name": "Joss Whedon",
     "birthday": "1964",    
     "nationality": "American",
@@ -27,9 +26,8 @@ Content-Type: application/json
 
 {
     
-    
     "username": "",
-    "passoword": "plBG90&%",
+    "password": "plBG90&%",
     "name": "Joss Whedon",
     "birthday": "1964",    
     "nationality": "American",
@@ -37,7 +35,6 @@ Content-Type: application/json
           
 
 }
-
 
 
 //get all movies
