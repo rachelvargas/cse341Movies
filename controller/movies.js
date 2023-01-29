@@ -3,6 +3,22 @@ const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
 const {validationResult} = require('express-validator');
 
+const mongoose = require('mongoose');
+
+const MovieSchema = mongoose.Schema({
+    id: { type: String, required: true },
+    rank: { type: String },
+    title: { type: String, required: true },
+    director: { type: String },
+    yearRelease: {type: String},
+    rated: { type: String, required: true },
+    budget: { type: String },
+    lifeTimeGross: {type: String},
+ });
+ 
+ module.exports = mongoose.model('Movie', MovieSchema);
+
+
 const getData = async (req, res, next) => {
   try {
   const result = await mongodb

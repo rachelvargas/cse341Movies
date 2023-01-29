@@ -1,15 +1,41 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "My API",
-    "description": "Description",
+    "title": "Grossess Movies and its Director",
+    "description": "A app for the most grosses movies and their directors ",
     "version": "1.0.0"
   },
-  "host": "localhost:8080",
+  "securityDefinitions": {
+    "oauth": {
+        "type": "oauth2",
+        "authorizationUrl": "http://localhost:3000/api-docs",
+        "flows": 
+        "implicit",
+        "scopes": {
+            "read:movies": "read movie data",
+            "write:movies": "whrite movie data",
+
+            "read:directors": "read director data",
+            "write:directors": "write director data"
+        }
+    }
+},
+  "host": "localhost:3000",
   "basePath": "/",
+  "tags": [
+    {
+      "name": "Movies",
+      "description": "Operations about the most grossess movies"
+    },
+    {
+      "name": "Directors",
+      "description": "Operations about the movies directors"
+    }
+  ],
   "schemes": [
     "http"
   ],
+  
   "paths": {
     "/movies/": {
       "get": {
@@ -23,7 +49,9 @@
             "description": "OK"
           }
         }
+        
       },
+
       "post": {
         "description": "",
         "produces": [
@@ -94,6 +122,7 @@
           },
           "500": {
             "description": "Internal Server Error"
+            
           }
         }
       },
@@ -176,12 +205,12 @@
         }
       }
     },
-    "/directors/{username}": {
+    "/directors/{id}": {
       "put": {
         "description": "",
         "parameters": [
           {
-            "name": "username",
+            "name": "id",
             "in": "path",
             "required": true,
             "type": "string"

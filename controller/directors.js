@@ -2,6 +2,17 @@
 const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
 const {validationResult} = require('express-validator');
+const mongoose = require('mongoose');
+
+const directorSchema = mongoose.Schema({
+    id: { type: String, required: true },
+    name: { type: String },
+    birthday: { type: String, required: true },
+    nationality: { type: String },
+    knownFor: {type: String},
+ });
+ 
+ module.exports = mongoose.model('Director', directorSchema);
 
 
 const getDirectors = async (req, res, next) => {
